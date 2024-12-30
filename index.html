@@ -5,20 +5,44 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Hello Vue</title>
   
+  <!-- VUE -->
   <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-  <script src="./src/app.js" defer></script>
+  <!-- jQuery (necessário para o DataTables) -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- DataTables CSS -->
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
+  <!-- DataTables JS -->
+  <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+
   
 </head>
 <body>
-    
+  
   <div id="app">
-    <form id="app-form">
-      <input type="text" v-model="input_name" placeholder="Digite o seu nome">
-      <input type="submit" value="Enviar" v-on:click="submitForm"> 
-    </form>
-    <p>Meu nome é {{ name }}</p>
-    <p>Data binding: {{ input_name }}</p>
+    <div>  
+      <table id="minhaTabela" class="display" style="width:100%">
+        <thead>
+          <tr>
+            <th>Nome</th>
+            <th>Idade</th>
+            <th>Email</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr v-for="usuario in usuarios" :key="usuario.email">
+            <td>{{ usuario.nome }}</td>
+            <td>{{ usuario.idade }}</td>
+            <td>{{ usuario.email }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
+  
+  
+
+  <script src="app.js" defer></script>
+  <script src="./components/ProductList.js"></script>
 
 </body>
 </html>
