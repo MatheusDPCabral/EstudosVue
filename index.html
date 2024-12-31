@@ -1,48 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hello Vue</title>
-  
-  <!-- VUE -->
-  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-  <!-- jQuery (necessário para o DataTables) -->
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <!-- DataTables CSS -->
-  <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
-  <!-- DataTables JS -->
-  <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
-
-  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notas Fiscais</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Vue.js -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <!-- DataTables -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
 </head>
-<body>
-  
-  <div id="app">
-    <div>  
-      <table id="minhaTabela" class="display" style="width:100%">
-        <thead>
-          <tr>
-            <th>Nome</th>
-            <th>Idade</th>
-            <th>Email</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr v-for="usuario in usuarios" :key="usuario.email">
-            <td>{{ usuario.nome }}</td>
-            <td>{{ usuario.idade }}</td>
-            <td>{{ usuario.email }}</td>
-          </tr>
-        </tbody>
-      </table>
+
+<body class="bg-gray-100 p-4 bg-gray-200">
+    <div id="app" class="container mx-auto">
+        <h1 class="text-2xl font-bold mb-4; text-center mt-14 text-violet-800">Tabela de Notas Fiscais</h1>
+        <table id="notasTable" class="display w-full">
+            <thead>
+                <tr>
+                    <th class="text-indigo-600">ID</th>
+                    <th class="text-indigo-600">Tipo</th>
+                    <th class="text-indigo-600">Numero da Nota</th>
+                    <th class="text-indigo-600">Chave da Nota</th>
+                    <th class="text-indigo-600">CNPJ</th>
+                    <th class="text-indigo-600">Nome do Emitente</th>
+                    <th class="text-indigo-600">Valor</th>
+                    <th class="text-indigo-600">Data</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Dados serão preenchidos dinamicamente -->
+            </tbody>
+        </table>
     </div>
-  </div>
-  
-  
-
-  <script src="app.js" defer></script>
-  <script src="./components/ProductList.js"></script>
-
+    <script src="app.js"></script>
 </body>
+
 </html>
