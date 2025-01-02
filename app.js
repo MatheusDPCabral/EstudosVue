@@ -30,16 +30,15 @@ createApp({
     populateDataTable() {
       $('#notasTable').DataTable({
         data: this.notas, // Use os dados retornados pela API
-        destroy: true,    // Destrói a instância anterior para evitar conflitos
         columns: [
-          { data: 'id', title: 'ID' },                      // Mapeia o campo "id"
-          { data: 'tipo', title: 'Tipo' },                  // Mapeia o campo "tipo"
-          { data: 'numeroNota', title: 'Número da Nota' },  // Mapeia o campo "numeroNota"
-          { data: 'chaveNota', title: 'Chave da Nota' },    // Mapeia o campo "chaveNota"
-          { data: 'cnpjEmitente', title: 'CNPJ Emitente' }, // Mapeia o campo "cnpjEmitente"
-          { data: 'nomeEmitente', title: 'Nome do Emitente' }, // Mapeia o campo "nomeEmitente"
-          { data: 'valorNota', title: 'Valor' },            // Mapeia o campo "valorNota"
-          { data: 'dataEmissao', title: 'Data de Emissão' } // Mapeia o campo "dataEmissao"
+          { data: 'id', title: 'ID' },                         // preenche o campo "id"
+          { data: 'tipo', title: 'Tipo' },                     // preenche o campo "tipo"
+          { data: 'numeroNota', title: 'Número da Nota' },     // preenche o campo "numeroNota"
+          { data: 'chaveNota', title: 'Chave da Nota' },       // preenche o campo "chaveNota"
+          { data: 'cnpjEmitente', title: 'CNPJ Emitente' },    // preenche o campo "cnpjEmitente"
+          { data: 'nomeEmitente', title: 'Nome do Emitente' }, // preenche o campo "nomeEmitente"
+          { data: 'valorNota', title: 'Valor' },               // preenche o campo "valorNota"
+          { data: 'dataEmissao', title: 'Data de Emissão' }    // preenche o campo "dataEmissao"
         ]
       });
     }
@@ -49,3 +48,5 @@ createApp({
     this.fetchNotas(); // Chama ao carregar a aplicação
   }
 }).mount('#app');
+
+

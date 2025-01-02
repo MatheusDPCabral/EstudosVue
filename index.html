@@ -15,8 +15,8 @@
     <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
 </head>
 
-<body class="bg-gray-100 p-4 bg-gray-200">
-    <div id="app" class="container mx-auto mt-16 shadow-2xl border rounded-xl">
+<body class="bg-gray-100 p-4 bg-gray-300">
+    <div id="app" class="container mx-auto mt-16 shadow-2xl rounded-xl border-double border-4 border-blue-600">
         <h1 class="text-2xl font-bold mb-4; text-center mt-14 text-violet-800">Tabela de Notas Fiscais</h1>
         <table id="notasTable" class="display w-full">
             <thead>
@@ -31,12 +31,15 @@
                     <th class="text-indigo-600">Data</th>
                 </tr>
             </thead>
-            <tbody>
-                <!-- Dados serão preenchidos dinamicamente -->
+            <tbody class="text-violet-700">
+                <!-- Dados preenchidos dinamicamente -->
             </tbody>
         </table>
     </div>
     <script src="app.js"></script>
+    <script>
+        
+    </script>
 </body>
 
 </html>
